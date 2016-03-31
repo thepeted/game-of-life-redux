@@ -56,9 +56,9 @@ export const advanceGrid = function(grid = []){
 
             if (!cellIsAlive) {
                 if (neighbours === 3) {
-                row.push(true);
+                row.push(1);
             } else {
-                row.push(false);
+                row.push(0);
                 }
             }
      }
