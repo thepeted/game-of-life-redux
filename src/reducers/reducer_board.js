@@ -8,7 +8,7 @@ export default (state = initialGrid, action) => {
   switch(action.type){
     case 'TOGGLE_ALIVE':
       let board = state.slice(0);
-      board[action.x][action.y] = !(board[action.x][action.y]);
+      board[action.x][action.y].status = !(board[action.x][action.y].status);
       return board;
     case 'MAKE_RANDOM':
       //true param toggles a random grid

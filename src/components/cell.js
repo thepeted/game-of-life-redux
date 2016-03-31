@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default ({alive, handleClick}) =>
+export default ({alive, newGen, handleClick}) =>
   (
       <td
         onClick={handleClick}
-        style={{backgroundColor: alive ? 'blue' : ''}}
+        className={`${alive ? 'alive' : ''} ${newGen ? 'new-gen' : ''}`}
         >
       </td>
     )

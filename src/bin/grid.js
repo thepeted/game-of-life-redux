@@ -7,7 +7,10 @@ export const makeGrid = (height, width, makeRandom = false) => {
         if (makeRandom){
           value = Math.random() > 0.8
         }
-        row.push(value);
+        row.push({
+          status: value,
+          newGen: value
+        });
       }
       grid.push(row);
     }
@@ -25,14 +28,14 @@ export const advanceGrid = function(grid = []){
        let rightColumn = (y+1 === gridWidth) ? 0 : y+1;
 
        let total = 0;
-       total+= grid[topRow][leftColumn];
-       total+= grid[topRow][y];
-       total+= grid[topRow][rightColumn];
-       total+= grid[x][leftColumn];
-       total+= grid[x][rightColumn];
-       total+= grid[bottomRow][leftColumn];
-       total+= grid[bottomRow][y];
-       total+= grid[bottomRow][rightColumn];
+       total+= grid[topRow][leftColumn].status;
+       total+= grid[topRow][y].status;
+       total+= grid[topRow][rightColumn].status;
+       total+= grid[x][leftColumn].status;
+       total+= grid[x][rightColumn].status;
+       total+= grid[bottomRow][leftColumn].status;
+       total+= grid[bottomRow][y].status;
+       total+= grid[bottomRow][rightColumn].status;
 
        return total;
      }
@@ -41,24 +44,27 @@ export const advanceGrid = function(grid = []){
      for (let i = 0; i < gridHeight; i++) {
        let row = [];
        for (let j = 0; j < gridWidth; j++) {
-         let cellIsAlive = grid[i][j];
+         let cellIsAlive = grid[i][j].status;
          let neighbours = calculateNeighbours(i,j);
            if (cellIsAlive) {
                 if (neighbours < 2) {
-                    row.push(0)
+                    row.push({ status: 0 })
                 } else if (neighbours > 3){
-                    row.push(0);
+                    row.push({ status: 0 });
                 } else {
-                    row.push(1);
+                    row.push({ status: 1 });
                 }
             }
 
 
             if (!cellIsAlive) {
                 if (neighbours === 3) {
-                row.push(1);
+                row.push({
+                  status: 1,
+                  newGen: true
+                });
             } else {
-                row.push(0);
+                row.push({ status: 0 });
                 }
             }
      }

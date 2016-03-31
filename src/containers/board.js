@@ -6,6 +6,7 @@ import Cell from '../components/cell'
 
 class Board extends Component {
   render(){
+    console.log(this.props.board);
     return (
       <div>
         <table>
@@ -14,7 +15,8 @@ class Board extends Component {
               <tr key={i}> {row.map((cell,j) =>
                   <Cell
                     key={j}
-                    alive={cell}
+                    alive={cell.status}
+                    newGen={cell.newGen}
                     handleClick={() => this.props.toggleAlive(i,j)}
                      />)}
               </tr> )}
