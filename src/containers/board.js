@@ -16,7 +16,7 @@ class Board extends Component {
                   <Cell
                     key={j}
                     alive={cell.status}
-                    newGen={cell.newGen}
+                    newBorn={cell.newBorn}
                     handleClick={() => this.props.toggleAlive(i,j)}
                      />)}
               </tr> )}

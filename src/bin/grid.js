@@ -5,11 +5,11 @@ export const makeGrid = (height, width, makeRandom = false) => {
       for (var j = 0; j < width; j++){
         let value;
         if (makeRandom){
-          value = Math.random() > 0.8
+          value = Math.random() > 0.85
         }
         row.push({
           status: value,
-          newGen: value
+          newBorn: value
         });
       }
       grid.push(row);
@@ -61,7 +61,7 @@ export const advanceGrid = function(grid = []){
                 if (neighbours === 3) {
                 row.push({
                   status: 1,
-                  newGen: true
+                  newBorn: true
                 });
             } else {
                 row.push({ status: 0 });

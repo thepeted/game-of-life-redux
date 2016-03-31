@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default ({alive, newGen, handleClick}) =>
+export default ({alive, newBorn, handleClick}) =>
   (
       <td
         onClick={handleClick}
-        className={`${alive ? 'alive' : ''} ${newGen ? 'new-gen' : ''}`}
+        className={`${alive ? 'alive' : ''} ${newBorn ? 'new-born' : ''}`}
         >
       </td>
     )
