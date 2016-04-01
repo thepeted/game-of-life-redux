@@ -8,10 +8,10 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h2>Conway's Game of Life</h2>
-        <Counter />
+        <h1>Game of Life (React-Redux)</h1>
         <Board/>
         <Control/>
+        <Counter />
       </div>
     );
   }

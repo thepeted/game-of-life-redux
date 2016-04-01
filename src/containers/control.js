@@ -10,24 +10,31 @@ class Control extends Component {
     this.togglePlay();
   }
   render(){
+    console.log(this.props.playState)
     return (
       <div className="controls">
-        <Button
-          handleClick={() => this.props.random()}
-          title={'Randomise'}
-        />
-       <Button
-          handleClick={() => this.clear()}
-          title={'Clear'}
-        />
-       <Button
-          handleClick={() => this.props.tick()}
-          title={'Step'}
-        />
-        <Button
-          title={'Play / Pause'}
-          handleClick={() => this.togglePlay()}
-        />
+        <div className="buttons">
+          <Button
+            handleClick={() => this.props.random()}
+            title={'Randomise'}
+            icon={'fa fa-random'}
+          />
+         <Button
+            handleClick={() => this.clear()}
+            title={'Clear'}
+            icon={'fa fa-undo'}
+          />
+         <div className="button-group">
+            <Button
+              icon={this.props.playState.isRunning ? 'fa fa-pause' : 'fa fa-play' }
+              handleClick={() => this.togglePlay()}
+            />
+            <Button
+               handleClick={() => this.props.tick()}
+               icon={'fa fa-step-forward'}
+             />
+          </div>
+        </div>
       </div>
     );
   }
