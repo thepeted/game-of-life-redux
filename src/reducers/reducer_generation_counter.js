@@ -7,8 +7,8 @@ const counter = (state = 0, action) => {
     case 'MAKE_RANDOM':
       return 0;
     default:
-      return state
+      return state;
   }
-}
+};
 
 export default counter;

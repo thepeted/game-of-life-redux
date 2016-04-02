@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { toggleAlive } from '../actions/'
-import Cell from '../components/cell'
+import { toggleAlive } from '../actions/';
+import Cell from '../components/cell';
 
 class Board extends Component {
   render(){

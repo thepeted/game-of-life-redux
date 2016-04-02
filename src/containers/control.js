@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { makeRandomGrid, tick, startPlaying, stopPlaying, clear } from '../actions/';
 
-import Button from '../components/button'
+import Button from '../components/button';
 
 class Control extends Component {
   componentDidMount(){

@@ -9,8 +9,8 @@ export default class App extends Component {
     return (
       <div>
         <h1>Game of Life (React-Redux)</h1>
-        <Board/>
-        <Control/>
+        <Board />
+        <Control />
         <Counter />
       </div>
     );
