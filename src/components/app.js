@@ -7,7 +7,7 @@ import GitHubForkRibbon from 'react-github-fork-ribbon';
 
 export default () => (
   <div>
-    <h1>Game of Life (React-Redux)</h1>
+    <h1>Game of Life (React + Redux)</h1>
     <Board />
     <Control />
     <Counter />
