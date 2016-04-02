@@ -48,20 +48,20 @@ table {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   color: #505050;
 }
 
 h1 {
   text-align: center;
-  font-size: 2.3em;
+  font-size: 2em;
   font-weight: 500;
 }
 
 .container {
-  max-width: 50em;
-  margin: 1em auto;
+  max-width: 40em;
+  margin: 1.5em auto;
 }
 
 td {
@@ -78,11 +78,15 @@ td {
   background-color: #ffbf00;
 }
 
+td:hover:not(.alive):not(.new-born){
+  background: #ddd;
+}
+
 .controls{
   float: left;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;      
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -95,7 +99,7 @@ table {
   margin-right: 0.4em;
   padding: 0.3em 0.7em;
   line-height: 1.5em;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 400;
   background: #db4500;
   color: #fff;
