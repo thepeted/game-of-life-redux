@@ -4,6 +4,8 @@ const counter = (state = 0, action) => {
       return state + 1;
     case 'CLEAR':
       return 0;
+    case 'MAKE_RANDOM':
+      return 0;
     default:
       return state
   }
