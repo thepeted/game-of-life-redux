@@ -6,7 +6,6 @@ import Cell from '../components/cell'
 
 class Board extends Component {
   render(){
-    console.log(this.props.board);
     return (
       <div>
         <table>

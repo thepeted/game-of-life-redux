@@ -10,7 +10,6 @@ class Control extends Component {
     this.togglePlay();
   }
   render(){
-    console.log(this.props.playState)
     return (
       <div className="controls">
         <div className="buttons">
