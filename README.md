@@ -4,7 +4,7 @@ An implementation of John Conway's Game of Life in React and Redux. [View the de
 
 Read the rules of the game on the [Game of Life Wikipedia Page](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
-You can add their own cells or generate a random grid.  You can also step through one generation at a time or play/pause to automatically advance generations.
+You can click to add your own cells or generate a random grid.  You can also step through one generation at a time or play/pause to automatically advance generations.
 
 ###Run on your machine###
 
