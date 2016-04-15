@@ -15,5 +15,4 @@ Checkout this Repo and
 > npm start
 ```
 
-####Webpack Starter Credit#####
-https://github.com/StephenGrider/ReduxSimpleStarter
+The game will be running at `http://localhost:8080/`
